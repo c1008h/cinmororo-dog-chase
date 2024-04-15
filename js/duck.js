@@ -24,7 +24,7 @@ class Duck {
         this.element.style.left = `${newX}px`;
         this.element.style.top = `${newY}px`;
     }
-    
+
     eat() {
         this.element.style.display = 'none'; // Hide the duck
     }
@@ -40,8 +40,8 @@ class Duck {
 
         // Increase velocity away from Cinnamoroll if too close
         if (distance < 100) {
-            this.velocity.x += 5 * (diffX / distance);  // Normalize and influence velocity
-            this.velocity.y += 5 * (diffY / distance);
-        }
+            this.velocity.x -= 5 * (diffX / distance);  // Normalize and influence velocity
+            this.velocity.y -= 5 * (diffY / distance);
+        } 
     }
 }

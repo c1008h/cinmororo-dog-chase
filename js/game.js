@@ -28,12 +28,27 @@ function checkCollision(duck, predator) {
     const duckRect = duck.element.getBoundingClientRect();
     const predatorRect = predator.getBoundingClientRect();
 
+    // Custom hitbox definition
+    const duckHitbox = {
+        left: duckRect.left + 0, // Adjust these values based on your image content
+        right: duckRect.right - 0,
+        top: duckRect.top + 0,
+        bottom: duckRect.bottom - 0,
+    };
+
+    const predatorHitbox = {
+        left: predatorRect.left + 0,
+        right: predatorRect.right - 0,
+        top: predatorRect.top + 0,
+        bottom: predatorRect.bottom - 0,
+    };
+
     // Check for overlapping rectangles (collision detection)
     return (
-        duckRect.left < predatorRect.right &&
-        duckRect.right > predatorRect.left &&
-        duckRect.top < predatorRect.bottom &&
-        duckRect.bottom > predatorRect.top
+        duckHitbox.left < predatorHitbox.right &&
+        duckHitbox.right > predatorHitbox.left &&
+        duckHitbox.top < predatorHitbox.bottom &&
+        duckHitbox.bottom > predatorHitbox.top
     );
 }
 
