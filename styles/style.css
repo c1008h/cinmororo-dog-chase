@@ -11,6 +11,8 @@
     position: absolute;
     width: 70px;
     height: 70px;
+    /* -webkit-transform: scaleX(-1); */
+    /* transform: scaleX(-1); */
 }
 
 .duck {

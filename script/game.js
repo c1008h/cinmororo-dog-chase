@@ -8,9 +8,11 @@ function moveCinnamororo(event) {
     switch (event.key) {
         case 'ArrowLeft':
             cinnamororo.style.left = `${rect.left - step}px`;
+            cinnamororo.style.transform = 'scaleX(1)';
             break;
         case 'ArrowRight':
             cinnamororo.style.left = `${rect.left + step}px`;
+            cinnamororo.style.transform = 'scaleX(-1)';
             break;
         case 'ArrowUp':
             cinnamororo.style.top = `${rect.top - step}px`;
